@@ -72,5 +72,11 @@ with gr.Blocks() as demo:
     user_input.submit(lambda x: gr.update(value=""), None, [user_input], queue=False)
     clear_button.click(reset_langgraph_chat, [], [chatbot, chat_state])
 
+    # Gradio Examples
+    examples = gr.Examples(
+        examples=["Can I have a look at the menu?", "What kind of Bubble Tea you have?"],
+        inputs=user_input
+    )
+
 # Step 5: Launch the Gradio interface
 demo.launch()

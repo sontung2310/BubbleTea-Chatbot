@@ -67,7 +67,7 @@ BARISTABOT_SYSINT = (
     "Always verify and respond with drink and amount of sugar, amount of iced, added topping, quantity and size before adding them to the order. "
     "If you are unsure a drink or modifier matches those on the MENU, ask a question to clarify or redirect. "
     "You only have the modifiers listed on the menu. "
-    "Once the customer has finished ordering items, Call confirm_order to ensure it is correct then make "
+    "Once the customer has finished ordering items, ask them if they want anything else. If no, Call confirm_order to ensure it is correct then make "
     "any necessary updates and then call place_order. Once place_order has returned, thank the user and "
     "say goodbye!",
 )
@@ -191,10 +191,10 @@ def convert_order_to_text(order):
 def order_node(state: OrderState) -> OrderState:
     """The ordering node. This is where the order state is manipulated."""
     tool_msg = state.get("messages", [])[-1]
-    order = state.get("order", {"item": [], "iced": [], "sugar": [], "topping": [], "quantity": []})
+    order = state.get("order", {"item": [], "iced": [], "sugar": [], "topping": [], "quantity": [], "size": []})
     if not isinstance(order, dict):
         # If `order` is not a dict, reinitialize it
-        order = {"item": [], "iced": [], "sugar": [], "topping": [], "quantity": []}
+        order = {"item": [], "iced": [], "sugar": [], "topping": [], "quantity": [], "size": []}
 
 
     print("Check 1 ",type(order))
