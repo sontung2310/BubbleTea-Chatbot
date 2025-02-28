@@ -6,7 +6,7 @@ You've probably heard a lot about AI Agents recently but aren't sure how to crea
 I’ve also designed a user-friendly interface with Gradio. The project, ShinTea, is a simulated bubble tea ordering system that provides a looping chat interface, allowing customers to order bubble tea using natural language.
 
 ## Chatbot demo
-![Alt text](Shintea/resources/demo_ShinTea.gif?raw=true "Chatbot demo")
+![Alt Text](https://raw.githubusercontent.com/sontung2310/BubbleTea-Chatbot/refs/heads/main/resources/demo_ShinTea.gif)
 
 ## Key features of Chatbot
 - Display the menu
